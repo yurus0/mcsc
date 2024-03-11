@@ -38,7 +38,7 @@ export default function Home() {
         </div>
     </div>
     <div className='py-10'></div>
-    <div className="flex min-h-screen flex-row items-center justify-between p-10">
+    <div id="about" className="flex min-h-screen flex-row items-center justify-between p-10">
       {/*about*/}
       <div className="flex flex-col">
         <h1 className="text-4xl font-semibold text-left mb-8 pt-6">
@@ -66,20 +66,26 @@ export default function Home() {
       height={500}
       priority/>
     </div>
-    <div className='relative flex min-h-screen flex-col items-center justify-center'>
+    <div id="partners" className='relative flex min-h-screen flex-col items-center justify-center'>
     <div style={{ height: '80vh', width: '100vw' }}>
           <Canvas>
             <SpaceParticles />
           </Canvas>
     </div>
     <div className='absolute top-40 py-16'>
-        <h1 className="text-4xl font-semibold text-center">
+        <h1 className="text-5xl font-semibold text-center">
           <code>Partners</code>
           </h1>
     </div>
-    <div className='absolute flex bg-gradient-to-t from-transparent from-10% via-[#00ff41]/[.4] to-90% opacity-15 h-28 w-full'>
+    <div className='absolute flex bg-gradient-to-t from-transparent from-40% via-[#00ff41]/[.7] to-60% opacity-90 h-14 w-full'>
     </div>
-    <div className='absolute flex flex-col bg-gradient-to-t from-transparent via-[#00ff41]/[.35] min-h-72 w-full justify-center items-center'>
+    <div className='absolute flex bg-gradient-to-t from-transparent from-30% via-[#00ff41]/[.7] to-70% opacity-80 h-28 w-full'>
+    </div>
+    <div className='absolute flex bg-gradient-to-t from-transparent from-20% via-[#00ff41]/[.7] to-80% opacity-80 h-60 w-full'>
+    </div>
+    <div className='absolute flex bg-gradient-to-t from-transparent from-10% via-[#00ff41]/[.7] to-90% opacity-60 h-64 w-full'>
+    </div>
+    <div className='absolute flex flex-col bg-gradient-to-t from-transparent via-[#00ff41]/[.5] min-h-96 w-full justify-center items-center'>
     
       <div className='flex flex-row justify-center items-center'>
         <div className='px-10'>
@@ -94,7 +100,7 @@ export default function Home() {
         <Image
           src="/offsec.png"
           alt="offsec"
-          width={400}
+          width={350}
           height={250}
           priority
         />
@@ -103,17 +109,14 @@ export default function Home() {
         <Image
           src="/aws.png"
           alt="aws"
-          width={300}
+          width={200}
           height={200}
           priority
         /></div>
       </div>
     </div>
-    <div className='absolute flex min-h-60 w-full'>
-      
     </div>
-    </div>
-    <div className="flex min-h-screen flex-col items-center justify-between p-20">
+    <div id="faq" className="flex min-h-screen flex-col items-center justify-between p-20">
       <FAQ />
     </div>
     </div>
