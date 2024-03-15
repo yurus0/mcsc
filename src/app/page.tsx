@@ -1,5 +1,6 @@
 "use client";
 import FAQ from '@/components/Faq';
+import Footer from '@/components/Footer';
 import SpaceParticles from '@/components/SpaceParticles';
 import Image from 'next/image';
 import { Canvas } from 'react-three-fiber';
@@ -10,7 +11,7 @@ export default function Home() {
 
   return (
     <div className='bg-black'>
-    <div className="fixed absolute top-0 left-0" style={{ height: '100vh', width: '100vw' }}>
+    <div className="fixed absolute top-0 left-0" style={{ height: '110vh', width: '100vw' }}>
           <Canvas>
             <SpaceParticles />
           </Canvas>
@@ -18,7 +19,7 @@ export default function Home() {
       <div className='sticky'>
       <Navbar/>
       </div>
-      <div className="flex min-h-80 flex-col items-center justify-between">
+      <div className="flex min-h-96 flex-col items-center justify-between">
         <div className="flex pt-40">
           <div className="flex justify-center">
             <Image
@@ -29,96 +30,52 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className='flex flex-row justify-between'>
-        <div className=''>
+        <div className='flex flex-col justify-center items-center'>
+        <div className='pt-36'>
           <h1 className="text-2xl font-semibold text-right">
             <code>23, 24, 25 april 2024, Rabat - MA</code>
             </h1>
         </div>
+        <div className='pt-24'>
+          <button className='bg-transparent rounded-lg ring-2 ring-[#00ff41] px-10 py-4'>
+            <p className='text-xl text-center'>
+            <code>Register Now</code>
+            </p>
+          </button>
+        </div>
         </div>
     </div>
     <div className='py-10'></div>
-    <div id="about" className="flex min-h-screen flex-row items-center justify-between p-10">
+    <div id="about" className="flex min-h-screen flex-row items-center justify-center p-10 px-16">
       {/*about*/}
       <div className="flex flex-col">
-        <h1 className="text-4xl font-semibold text-left mb-8 pt-6">
+        <h1 className="text-5xl font-semibold text-left mb-8 pt-48">
           <code>Gathering Enthusiasts !</code>
         </h1>
-        <div className="items-start mx-auto pl">
-          <p className="text-sm font-light">
+        <div className="items-start mx-auto pr-10 pt-10">
+          <p className="text-md font-light">
             <code>
-            is an annual gathering that unites cybersecurity enthusiasts, industry experts, researchers, and students from Morocco and beyond. This event is designed to foster cybersecurity awareness, facilitate knowledge exchange, and serve as a unique platform for skill development.
+            This is an annual gathering that unites cybersecurity enthusiasts, industry experts, researchers, and students from Morocco and beyond.
             </code>
           </p>
+          <div className='pt-20 text-transparent bg-gradient-to-tr from-[#00ff41] to-[#66ff7d] bg-clip-text'>
+            <code className='text-7xl font-black'>Since 2011...</code>
+          </div>
         </div>
     </div>
     <Image
-            src="/mcsc.png"
+            src="/iamhacker.png"
             alt="About"
-            width={500}
+            width={600}
             height={500}
             priority
+            className='pt-44'
           />
-    <Image
-      src="/mcsc.png"
-      alt="About"
-      width={100}
-      height={500}
-      priority/>
-    </div>
-    <div id="partners" className='relative flex min-h-screen flex-col items-center justify-center'>
-    <div style={{ height: '80vh', width: '100vw' }}>
-          <Canvas>
-            <SpaceParticles />
-          </Canvas>
-    </div>
-    <div className='absolute top-40 py-16'>
-        <h1 className="text-5xl font-semibold text-center">
-          <code>Partners</code>
-          </h1>
-    </div>
-    <div className='absolute flex bg-gradient-to-t from-transparent from-40% via-[#00ff41]/[.7] to-60% opacity-90 h-14 w-full'>
-    </div>
-    <div className='absolute flex bg-gradient-to-t from-transparent from-30% via-[#00ff41]/[.7] to-70% opacity-80 h-28 w-full'>
-    </div>
-    <div className='absolute flex bg-gradient-to-t from-transparent from-20% via-[#00ff41]/[.7] to-80% opacity-80 h-60 w-full'>
-    </div>
-    <div className='absolute flex bg-gradient-to-t from-transparent from-10% via-[#00ff41]/[.7] to-90% opacity-60 h-64 w-full'>
-    </div>
-    <div className='absolute flex flex-col bg-gradient-to-t from-transparent via-[#00ff41]/[.5] min-h-96 w-full justify-center items-center'>
-    
-      <div className='flex flex-row justify-center items-center'>
-        <div className='px-10'>
-        <Image
-          src="/CC.svg"
-          alt="cybercohesion"
-          width={200}
-          height={150}
-          priority
-        /></div>
-      <div className='px-10'>
-        <Image
-          src="/offsec.png"
-          alt="offsec"
-          width={350}
-          height={250}
-          priority
-        />
-        </div>
-      <div className='px-10'>
-        <Image
-          src="/aws.png"
-          alt="aws"
-          width={200}
-          height={200}
-          priority
-        /></div>
-      </div>
-    </div>
     </div>
     <div id="faq" className="flex min-h-screen flex-col items-center justify-between p-20">
       <FAQ />
     </div>
+    <Footer/>
     </div>
   );
 }

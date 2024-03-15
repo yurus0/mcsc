@@ -7,17 +7,17 @@ const Navbar = () => {
             <div className="flex">
                 <div className='pt-2 px-6'>
                     <Link href="#about">
-                    <code className="text-md font-light tracking-wider hover:text-[#00ff41] hover:drop-shadow-[0_35px_35px_rgba(0,255,65,1)] cursor-default">about</code>
+                    <code className="text-md font-light tracking-wider hover:text-[#00ff41] hover:drop-shadow-[0_35px_35px_rgba(0,255,65,1)] cursor-default">About</code>
                     </Link>
                 </div>
                 <div className='pt-2 px-6'>
                     <Link href="#speakers">
-                    <code className="text-md font-light tracking-wider hover:text-[#00ff41] hover:drop-shadow-[0_35px_35px_rgba(0,255,65,1)] cursor-default">speakers</code>
+                    <code className="text-md font-light tracking-wider hover:text-[#00ff41] hover:drop-shadow-[0_35px_35px_rgba(0,255,65,1)] cursor-default">Speakers</code>
                     </Link>
                 </div>
                 <div className='pt-2 px-6'>
                     <Link href="#timeline">
-                    <code className="text-md font-light tracking-wider hover:text-[#00ff41] hover:drop-shadow-[0_35px_35px_rgba(0,255,65,1)] cursor-default">timeline</code>
+                    <code className="text-md font-light tracking-wider hover:text-[#00ff41] hover:drop-shadow-[0_35px_35px_rgba(0,255,65,1)] cursor-default">Timeline</code>
                     </Link>
                 </div>
             </div>
@@ -49,12 +49,12 @@ const Navbar = () => {
             <div className="flex">
                 <div className='pt-2 px-6'>
                     <Link href="#sponsors">
-                    <code className="text-md font-light tracking-wider hover:text-[#00ff41] hover:drop-shadow-[0_35px_35px_rgba(0,255,65,1)] cursor-default">sponsors</code>
+                    <code className="text-md font-light tracking-wider hover:text-[#00ff41] hover:drop-shadow-[0_35px_35px_rgba(0,255,65,1)] cursor-default">Sponsors</code>
                     </Link>
                 </div>
                 <div className='pt-2 px-6'>
                     <Link href="#partners">
-                    <code className="text-md font-light tracking-wider hover:text-[#00ff41] hover:drop-shadow-[0_35px_35px_rgba(0,255,65,1)] cursor-default">partners</code>
+                    <code className="text-md font-light tracking-wider hover:text-[#00ff41] hover:drop-shadow-[0_35px_35px_rgba(0,255,65,1)] cursor-default">Partners</code>
                     </Link>
                 </div>
                 <div className='pt-2 px-6'>
