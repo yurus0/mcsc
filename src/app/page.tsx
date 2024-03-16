@@ -3,6 +3,7 @@ import FAQ from '@/components/Faq';
 import Footer from '@/components/Footer';
 import SpaceParticles from '@/components/SpaceParticles';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Canvas } from 'react-three-fiber';
 import Navbar from '../components/Navbar';
 
@@ -37,11 +38,13 @@ export default function Home() {
             </h1>
         </div>
         <div className='pt-24'>
+          <Link href="/register">
           <button className='bg-transparent rounded-lg ring-2 ring-[#00ff41] px-10 py-4'>
             <p className='text-xl text-center'>
             <code>Register Now</code>
             </p>
           </button>
+          </Link>
         </div>
         </div>
     </div>
