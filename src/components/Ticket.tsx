@@ -15,6 +15,7 @@ function generateSerialNumber() {
 const Ticket = () => {
     
     const { data: session, status } = useSession();
+
     if(status === "authenticated"){
         const serialNumber = generateSerialNumber();
         return (
@@ -49,17 +50,5 @@ const Ticket = () => {
             </div>
         );
     }
-
-    return (
-        <div className="shrink-0 mt-4 relative pt-8">
-        <Image
-            src="/Asset 1.png"
-            alt="Ticket"
-            width={900}
-            height={250}
-            className='drop-shadow-[0_0px_5px_rgba(0,255,65,0.3)]'
-        />
-        </div>
-    );
 };
 export default Ticket;
