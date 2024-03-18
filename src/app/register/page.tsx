@@ -5,12 +5,15 @@ import Navbar from '@/components/Navbar';
 import { ShareActions } from '@/components/Share';
 import SpaceParticles from '@/components/SpaceParticles';
 import Ticket from '@/components/Ticket';
-import { SessionProvider } from 'next-auth/react';
+import { SessionProvider, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { Canvas } from 'react-three-fiber';
 
 const url = "https://localhost:3000";
 export default function Home() {
+
+
+
     return (
     <div className='bg-black'>
     <div className="fixed absolute top-0 left-0" style={{ height: '100vh', width: '100vw' }}>
@@ -32,7 +35,6 @@ export default function Home() {
         </div>
         <GithubButton/>
         <SessionProvider>
-            {<ShareActions shareUrl={url || "https://localhost:3000"}/>}
         <Ticket/>
         </SessionProvider>
     </div>
