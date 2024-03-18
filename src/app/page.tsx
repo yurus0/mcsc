@@ -1,13 +1,13 @@
 "use client";
 import FAQ from '@/components/Faq';
 import Footer from '@/components/Footer';
-import SpaceParticles from '@/components/SpaceParticles';
 import RegisterButton from '@/components/RegisterButton';
+import SpaceParticles from '@/components/SpaceParticles';
+import { SessionProvider, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Canvas } from 'react-three-fiber';
 import Navbar from '../components/Navbar';
-import { SessionProvider, useSession } from 'next-auth/react';
 
 function MyComponent() {
   const { data: session } = useSession();
@@ -47,14 +47,13 @@ export default function Home() {
           </div>
           <div className='pt-24'>
             <RegisterButton/>
-            <MyComponent/>
-            {/* <Link href="/register">
-            <button className='bg-transparent rounded-lg ring-2 ring-[#00ff41] px-10 py-4'>
+            <Link href="/register">
+            <button className='shrink-0 mt-4 relative bg-transparent rounded-lg ring-2 ring-[#00ff41] px-10 py-4'>
               <p className='text-xl text-center'>
               <code>Register Now</code>
               </p>
             </button>
-            </Link> */}
+            </Link>
           </div>
           </div>
       </div>

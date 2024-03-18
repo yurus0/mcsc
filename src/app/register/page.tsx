@@ -4,10 +4,12 @@ import { GithubButton } from '@/components/GithubButton';
 import Navbar from '@/components/Navbar';
 import SpaceParticles from '@/components/SpaceParticles';
 import Ticket from '@/components/Ticket';
+import { SessionProvider, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { Canvas } from 'react-three-fiber';
 
 export default function Home() {
+
 
 
     return (
@@ -30,7 +32,9 @@ export default function Home() {
                 />
         </div>
         <GithubButton/>
+        <SessionProvider>
         <Ticket/>
+        </SessionProvider>
     </div>
     <Footer/>
     </div>
