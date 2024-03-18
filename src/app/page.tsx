@@ -5,51 +5,13 @@ import RegisterButton from '@/components/RegisterButton';
 import SpaceParticles from '@/components/SpaceParticles';
 import { SessionProvider, useSession } from 'next-auth/react';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
 import Navbar from '../components/Navbar';
-import Link from 'next/link';
 
-export function Profile() {
-  const { data: session, status } = useSession();
-  const [user, setUser] = useState({
-    name: '',
-    login: '',
-    avatar_url: '',
-  });
-
-  useEffect(() => {
-    const fetchUserData = async () => {
-      if (status === 'authenticated') {
-        try {
-          const userRes = await fetch("https://api.github.com/user", {
-                headers: {
-                Authorization: `bearer ${session?.accessToken as string}`,
-                },
-            });
-          if (userRes.ok) {
-            const userData = await userRes.json();
-            setUser(userData);
-          } else {
-            console.error('Failed to fetch user data:', userRes.statusText);
-          }
-        } catch (error) {
-          console.error('Error fetching user data:', error);
-        }
-      }
-    };
-
-    fetchUserData();
-  }, [session, status]);
-
-  return (
-    <div>
-      <div>{user?.name}</div>
-      <div>{session?.user.email}</div>
-      <div>{user?.login}</div>
-      <div>{user?.avatar_url}</div>
-    </div>
-  );
+function MyComponent() {
+  const { data: session } = useSession();
+  console.log(session);
+  return <div>{session?.user?.email}</div>;
 }
 
 export default function Home() {
@@ -86,10 +48,13 @@ export default function Home() {
             <RegisterButton/>
             <Link href="/register">
             <button className='shrink-0 mt-4 relative bg-transparent rounded-lg ring-2 ring-[#00ff41] px-10 py-4'>
+            <Link href="/register">
+            <button className='shrink-0 mt-4 relative bg-transparent rounded-lg ring-2 ring-[#00ff41] px-10 py-4'>
               <p className='text-xl text-center'>
               <code>Register Now</code>
               </p>
             </button>
+            </Link>
             </Link>
           </div>
           </div>
