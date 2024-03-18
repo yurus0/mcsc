@@ -1,4 +1,3 @@
-import { signIn } from "next-auth/react";
 import { useState } from "react";
 
 const githubUrl = `https://github.com/login/oauth/authorize?client_id=${encodeURIComponent(
