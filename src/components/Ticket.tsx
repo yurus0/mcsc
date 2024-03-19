@@ -15,7 +15,6 @@ function generateSerialNumber() {
 const Ticket = () => {
     
     const { data: session, status } = useSession();
-
     if(status === "authenticated"){
         const serialNumber = generateSerialNumber();
         return (
