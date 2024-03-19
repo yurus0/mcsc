@@ -28,10 +28,6 @@ const Ticket = () => {
     
     const { data: session, status } = useSession();
     if(status === "authenticated"){
-        console.log(session);
-        console.log(status);
-        //generate serial number from session
-
         const serialNumber = generateSerialNumber();
         return (
             <div className="shrink-0 mt-4 relative pt-8">
@@ -60,7 +56,7 @@ const Ticket = () => {
                     />
                 </div>
                 <div className="z-10 absolute bottom-14 right-0 pl-18 flex flex-col justify-center items-center">
-                    <code className='pt-24 -rotate-90'>#{serialNumber}</code>
+                    <code className='pt-24 -rotate-90 opacity-50'>#{serialNumber}</code>
                 </div>
             </div>
         );
