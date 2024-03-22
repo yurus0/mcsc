@@ -13,20 +13,36 @@ function generateSerialNumber() {
     return serialNumber;
 }
 
-function generateSerialNumber() {
-    length = 15;
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let serialNumber = '';
-    for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * characters.length);
-        serialNumber += characters.charAt(randomIndex);
-    }
-    return serialNumber;
-}
-
 const Ticket = () => {
-    
     const { data: session, status } = useSession();
+
+    const [user, setUser] = useState();
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      if (status === 'authenticated') {
+        try {
+          const userRes = await fetch("https://api.github.com/user", {
+                headers: {
+                Authorization: `bearer ${session?.accessToken as string}`,
+                },
+            });
+          if (userRes.ok) {
+            const userData = await userRes.json();
+            setUser(userData);
+          } else {
+            console.error('Failed to fetch user data:', userRes.statusText);
+          }
+        } catch (error) {
+          console.error('Error fetching user data:', error);
+        }
+      }
+    };
+
+    fetchUserData();
+  }, [session, status]);
+
+
     if(status === "authenticated"){
         const serialNumber = generateSerialNumber();
         return (
@@ -43,12 +59,12 @@ const Ticket = () => {
                     {session?.user?.name}
                     </code>
                     <code className="text-xl text-center text-white">
-                    {session?.user?.name}
+                    {user?.login}
                     </code>
                 </div>
                 <div className="shrink-0 mt-4 z-10 absolute top-44 pt-3 left-24 rounded-full">
                     <Image
-                    src="https://avatars.githubusercontent.com/u/62514716?v=4"
+                    src={session?.user?.image}
                     width={150}
                     height={150}
                     alt='Profile Picture'
