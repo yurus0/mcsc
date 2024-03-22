@@ -1,6 +1,29 @@
 import { User } from "next-auth";
+import { User } from "next-auth";
 import NextAuth from "next-auth/next";
 import GithubProvider from "next-auth/providers/github";
+
+declare module 'next-auth' {
+    interface Session {
+    user: {
+        login: string;
+        name: string;
+        image: string;
+        email: string;
+         // Add other custom properties if needed
+    };
+    accessToken: string; // Add access token property
+    }
+}
+
+declare module 'next-auth' {
+    interface User {
+        login: string;
+        name: string;
+        image: string;
+        email: string;
+    }
+}
 
 declare module 'next-auth' {
     interface Session {
@@ -29,11 +52,11 @@ const handler = NextAuth({
         GithubProvider({
             clientId: process.env.GITHUB_CLIENT_ID as any,
             clientSecret: process.env.GITHUB_CLIENT_SECRET as any,
+            clientId: process.env.GITHUB_CLIENT_ID as any,
+            clientSecret: process.env.GITHUB_CLIENT_SECRET as any,
         }),
     ],
     callbacks: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         async session({ session, token, user }:{session: any, token: any, user: any}) {
             session.accessToken = token.accessToken;
 
@@ -51,28 +74,24 @@ const handler = NextAuth({
         return token;
         },
     },
-=======
-        async session({ session, token, user }) {
-=======
-        async session({ session, token, user }: { session: any; token: any; user: User }) {
->>>>>>> 01fce548 (fix:fixing code errors that resulted from conflict resolving;)
-          session.accessToken = token.accessToken;
-        
-        //   console.log(session);
-          return session;
+    callbacks: {
+        async session({ session, token, user }:{session: any, token: any, user: any}) {
+            session.accessToken = token.accessToken;
+
+         //   console.log(session);
+            return session;
         },
         async jwt({ token, user, account, profile, isNewUser }) {
-          if (account) {
+        if (account) {
             token.accessToken = account.access_token;
-            // console.log(token)
-          }
-          else{
+             // console.log(token)
+        }
+        else{
             console.log("ERRROR")
-          }
-          return token;
+        }
+        return token;
         },
-      },
->>>>>>> c870c86c (configurer le system des tickets)
-});
+    },
+  });
 
 export { handler as GET, handler as POST };
