@@ -1,22 +1,28 @@
 "use client";
 import FAQ from '@/components/Faq';
 import Footer from '@/components/Footer';
-import { GithubButton } from '@/components/GithubButton';
+<<<<<<< HEAD
+import RegisterButton from '@/components/RegisterButton';
 import SpaceParticles from '@/components/SpaceParticles';
 import Ticket from '@/components/Ticket';
 import { SessionProvider, useSession } from 'next-auth/react';
+=======
+import SpaceParticles from '@/components/SpaceParticles';
+>>>>>>> c870c86c (configurer le system des tickets)
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
 import Navbar from '../components/Navbar';
+<<<<<<< HEAD
+=======
+import { SessionProvider, useSession } from 'next-auth/react';
+import { GithubButton } from '@/components/GithubButton';
+import { useEffect, useState } from 'react';
+import Ticket from '@/components/Ticket';
+>>>>>>> c870c86c (configurer le system des tickets)
 
 export function Profile() {
   const { data: session, status } = useSession();
-  const [user, setUser] = useState({
-    name: '',
-    login: '',
-    avatar_url: '',
-  });
+  const [user, setUser] = useState();
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -128,9 +134,20 @@ export default function Home() {
               </h1>
           </div>
           <div className='pt-24'>
+<<<<<<< HEAD
+            <RegisterButton/>
+            <Link href="/register">
+            <button className='shrink-0 mt-4 relative bg-transparent rounded-lg ring-2 ring-[#00ff41] px-10 py-4'>
+              <p className='text-xl text-center'>
+              <code>Register Now</code>
+              </p>
+            </button>
+            </Link>
+=======
             <GithubButton />
-            {/* <Profile/>
-            <Ticket/> */}
+            <Profile/>
+            <Ticket/>
+>>>>>>> c870c86c (configurer le system des tickets)
           </div>
           </div>
       </div>

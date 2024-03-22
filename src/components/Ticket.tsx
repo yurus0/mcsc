@@ -1,6 +1,7 @@
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function generateSerialNumber() {
     length = 15;
@@ -95,8 +96,5 @@ const Ticket = () => {
     );
 };
 export default Ticket;
-
-
-
 
 
