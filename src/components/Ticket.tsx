@@ -13,21 +13,14 @@ function generateSerialNumber() {
     return serialNumber;
 }
 
-function generateSerialNumber() {
-    length = 15;
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let serialNumber = '';
-    for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * characters.length);
-        serialNumber += characters.charAt(randomIndex);
-    }
-    return serialNumber;
-}
-
 const Ticket = () => {
     const { data: session, status } = useSession();
 
-    const [user, setUser] = useState();
+    const [user, setUser] = useState({
+        name: '',
+        login: '',
+        avatar_url: '',
+    });
 
   useEffect(() => {
     const fetchUserData = async () => {
