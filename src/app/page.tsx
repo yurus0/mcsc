@@ -12,7 +12,11 @@ import Ticket from '@/components/Ticket';
 
 export function Profile() {
   const { data: session, status } = useSession();
-  const [user, setUser] = useState();
+  const [user, setUser] = useState({
+    name: '',
+    login: '',
+    avatar_url: '',
+  });
 
   useEffect(() => {
     const fetchUserData = async () => {
