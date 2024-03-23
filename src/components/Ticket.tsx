@@ -16,7 +16,11 @@ function generateSerialNumber() {
 const Ticket = () => {
     const { data: session, status } = useSession();
 
-    const [user, setUser] = useState();
+    const [user, setUser] = useState({
+        name: '',
+        login: '',
+        avatar_url: '',
+    });
 
   useEffect(() => {
     const fetchUserData = async () => {
