@@ -4,16 +4,11 @@ import GithubProvider from "next-auth/providers/github";
 
 declare module 'next-auth' {
     interface Session {
-<<<<<<< HEAD
     user: {
-=======
-      user: {
->>>>>>> c870c86c (configurer le system des tickets)
         login: string;
         name: string;
         image: string;
         email: string;
-<<<<<<< HEAD
          // Add other custom properties if needed
     };
     accessToken: string; // Add access token property
@@ -21,26 +16,13 @@ declare module 'next-auth' {
 }
 
 declare module 'next-auth' {
-=======
-        // Add other custom properties if needed
-      };
-      accessToken: string; // Add access token property
-    }
-  }
-
-  declare module 'next-auth' {
->>>>>>> c870c86c (configurer le system des tickets)
     interface User {
         login: string;
         name: string;
         image: string;
         email: string;
     }
-<<<<<<< HEAD
 }
-=======
-  }
->>>>>>> c870c86c (configurer le system des tickets)
 
 const handler = NextAuth({
     providers: [
@@ -50,6 +32,7 @@ const handler = NextAuth({
         }),
     ],
     callbacks: {
+<<<<<<< HEAD
 <<<<<<< HEAD
         async session({ session, token, user }:{session: any, token: any, user: any}) {
             session.accessToken = token.accessToken;
@@ -70,6 +53,9 @@ const handler = NextAuth({
     },
 =======
         async session({ session, token, user }) {
+=======
+        async session({ session, token, user }: { session: any; token: any; user: User }) {
+>>>>>>> 01fce548 (fix:fixing code errors that resulted from conflict resolving;)
           session.accessToken = token.accessToken;
         
         //   console.log(session);
