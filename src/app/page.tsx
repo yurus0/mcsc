@@ -2,14 +2,14 @@
 import FAQ from '@/components/Faq';
 import Footer from '@/components/Footer';
 import RegisterButton from '@/components/RegisterButton';
+import RegisterButton from '@/components/RegisterButton';
 import SpaceParticles from '@/components/SpaceParticles';
-import Ticket from '@/components/Ticket';
 import { SessionProvider, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
 import Navbar from '../components/Navbar';
-import Link from 'next/link';
 
 export function Profile() {
   const { data: session, status } = useSession();
@@ -129,14 +129,7 @@ export default function Home() {
               </h1>
           </div>
           <div className='pt-24'>
-            <RegisterButton/>
-            <Link href="/register">
-            <button className='shrink-0 mt-4 relative bg-transparent rounded-lg ring-2 ring-[#00ff41] px-10 py-4'>
-              <p className='text-xl text-center'>
-              <code>Register Now</code>
-              </p>
-            </button>
-            </Link>
+            <RegisterButton />
           </div>
           </div>
       </div>
