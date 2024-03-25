@@ -83,14 +83,7 @@ export default function Home() {
               </h1>
           </div>
           <div className='pt-24'>
-            <RegisterButton/>
-            <Link href="/register">
-            <button className='shrink-0 mt-4 relative bg-transparent rounded-lg ring-2 ring-[#00ff41] px-10 py-4'>
-              <p className='text-xl text-center'>
-              <code>Register Now</code>
-              </p>
-            </button>
-            </Link>
+            <RegisterButton />
           </div>
           </div>
       </div>
