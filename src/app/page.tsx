@@ -8,7 +8,6 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
 import Navbar from '../components/Navbar';
-import Link from 'next/link';
 
 export function Profile() {
   const { data: session, status } = useSession();
@@ -104,6 +103,7 @@ export default function Home() {
               </h1>
           </div>
           <div className='pt-24'>
+<<<<<<< HEAD
             <RegisterButton/>
             <Link href="/register">
             <button className='shrink-0 mt-4 relative bg-transparent rounded-lg ring-2 ring-[#00ff41] px-10 py-4'>
@@ -112,6 +112,9 @@ export default function Home() {
               </p>
             </button>
             </Link>
+=======
+            <RegisterButton />
+>>>>>>> adf84491 (fix: fixing front for landing page;)
           </div>
           </div>
       </div>
