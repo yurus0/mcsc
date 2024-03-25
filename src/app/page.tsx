@@ -5,10 +5,10 @@ import RegisterButton from '@/components/RegisterButton';
 import SpaceParticles from '@/components/SpaceParticles';
 import { SessionProvider, useSession } from 'next-auth/react';
 import Image from 'next/image';
-import Link from "next/link";
 import { useEffect, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
 import Navbar from '../components/Navbar';
+import Link from 'next/link';
 
 export function Profile() {
   const { data: session, status } = useSession();
