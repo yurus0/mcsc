@@ -1,14 +1,15 @@
 "use client";
 import FAQ from '@/components/Faq';
 import Footer from '@/components/Footer';
+import RegisterButton from '@/components/RegisterButton';
 import SpaceParticles from '@/components/SpaceParticles';
+import { SessionProvider, useSession } from 'next-auth/react';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
 import Navbar from '../components/Navbar';
-import { SessionProvider, useSession } from 'next-auth/react';
+import Link from 'next/link';
 import { GithubButton } from '@/components/GithubButton';
-import { useEffect, useState } from 'react';
-import Ticket from '@/components/Ticket';
 
 export function Profile() {
   const { data: session, status } = useSession();
@@ -107,6 +108,7 @@ export default function Home() {
             <GithubButton />
             {/* <Profile/>
             <Ticket/> */}
+            <RegisterButton />
           </div>
           </div>
       </div>
