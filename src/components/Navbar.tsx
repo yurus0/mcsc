@@ -15,21 +15,35 @@ const navbarItems: NavbarItem[] = [
     { item: "Partners", id: "partners" },
     { item: "FAQ", id: "faq" }
 ];
+import { useState } from 'react';
+
+interface NavbarItem {
+    item: string;
+    id: string;
+}
+
+const navbarItems: NavbarItem[] = [
+    { item: "About", id: "about" },
+    { item: "Speakers", id: "speakers" },
+    { item: "Timeline", id: "timeline" },
+    { item: "Sponsors", id: "sponsors" },
+    { item: "Partners", id: "partners" },
+    { item: "FAQ", id: "faq" }
+];
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
+    const [toggle, setToggle] = useState(false);
     return (
-        <div className="left-0 top-0 w-full bg-black p-4 lg:static lg:w-auto flex items-center justify-between pl-20">
+        <div className="left-0 top-0 w-full bg-black p-6 lg:static lg:w-auto lg:p-4 flex items-center justify-center">
             <div className='px-0 pt-2 flex flex-row justify-center items-center'>
                 <div className="pl-0">
-                    <Link href="/">
                     <Image
                         src="/mcsc.png"
                         alt="MCSC Logo"
-                        width={70}
+                        width={60}
                         height={25}
                     />
-                    </Link>
                 </div>
             </div>
             <div className="flex lg:flex hidden">
