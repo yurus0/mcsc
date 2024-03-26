@@ -54,8 +54,8 @@ const Ticket = () => {
                 <Image
                     src="/Asset 1.png"
                     alt="Ticket"
-                    width={900}
-                    height={250}
+                    width={100}
+                    height={80}
                     className='drop-shadow-[0_0px_5px_rgba(0,255,65,0.3)]'
                 />
                 <div className="shrink-0 mt-4 z-10 absolute top-44 left-80 flex flex-col justify-between items-start">
