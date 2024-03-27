@@ -1,6 +1,5 @@
 "use client";
 import Footer from '@/components/Footer';
-import { GithubButton } from '@/components/GithubButton';
 import Navbar from '@/components/Navbar';
 import { ShareActions } from '@/components/Share';
 import SpaceParticles from '@/components/SpaceParticles';
@@ -31,9 +30,8 @@ export default function Home() {
                 height={100}
                 />
         </div>
-        <GithubButton/>
         <SessionProvider>
-            <ShareActions shareUrl={url || "https://localhost:3000"}/>
+        <ShareActions shareUrl={url || "https://localhost:3000"}/>
         <Ticket/>
         </SessionProvider>
     </div>
