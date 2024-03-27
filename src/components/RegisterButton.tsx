@@ -7,7 +7,7 @@ const RegisterButton = () => {
   const [loading, setLoading] = useState(false);
 
   return (
-    <Link
+    <a
       href="/register"
       onClick={() => setLoading(true)}
       className="shrink-0 mt-4 relative px-10 py-3 rounded-lg ring-2 ring-[#00ff41] border-[#00ff41] border-2 bg-transparent flex items-center justify-center font-medium hover:scale-105 transition-all"
@@ -15,7 +15,7 @@ const RegisterButton = () => {
         <p className='text-xl text-center'>
             <code>{loading ? "Redirecting ...." : "Register Now"}</code>
         </p>
-    </Link>
+    </a>
   );
 }
 export default RegisterButton;
