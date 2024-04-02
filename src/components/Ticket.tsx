@@ -22,29 +22,29 @@ const Ticket = () => {
         avatar_url: '',
     });
 
-  useEffect(() => {
+    useEffect(() => {
     const fetchUserData = async () => {
-      if (status === 'authenticated') {
-        try {
-          const userRes = await fetch("https://api.github.com/user", {
-                headers: {
-                Authorization: `bearer ${session?.accessToken as string}`,
-                },
-            });
-          if (userRes.ok) {
-            const userData = await userRes.json();
-            setUser(userData);
-          } else {
-            console.error('Failed to fetch user data:', userRes.statusText);
-          }
-        } catch (error) {
-          console.error('Error fetching user data:', error);
+        if (status === 'authenticated') {
+            try {
+            const userRes = await fetch("https://api.github.com/user", {
+                    headers: {
+                    Authorization: `bearer ${session?.accessToken as string}`,
+                    },
+                });
+            if (userRes.ok) {
+                const userData = await userRes.json();
+                setUser(userData);
+            } else {
+                console.error('Failed to fetch user data:', userRes.statusText);
+            }
+            } catch (error) {
+            console.error('Error fetching user data:', error);
+            }
         }
-      }
-    };
+        };
 
-    fetchUserData();
-  }, [session, status]);
+        fetchUserData();
+    }, [session, status]);
 
 
     if(status === "authenticated"){
@@ -55,7 +55,7 @@ const Ticket = () => {
                     src="/Asset 1.png"
                     alt="Ticket"
                     width={900}
-                    height={250}
+                    height={80}
                     className='drop-shadow-[0_0px_5px_rgba(0,255,65,0.3)]'
                 />
                 <div className="shrink-0 mt-4 z-10 absolute top-44 left-80 flex flex-col justify-between items-start">

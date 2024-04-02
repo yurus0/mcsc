@@ -15,15 +15,6 @@ declare module 'next-auth' {
     }
 }
 
-declare module 'next-auth' {
-    interface User {
-        login: string;
-        name: string;
-        image: string;
-        email: string;
-    }
-}
-
 const handler = NextAuth({
     providers: [
         GithubProvider({
