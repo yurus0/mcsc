@@ -5,52 +5,10 @@ import Navbar from '@/components/Navbar';
 import RegisterButton from '@/components/RegisterButton';
 import SpaceParticles from '@/components/SpaceParticles';
 import Timeline from '@/components/Timeline';
-import { SessionProvider, useSession } from 'next-auth/react';
+import { SessionProvider } from 'next-auth/react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
-
-export function Profile() {
-  const { data: session, status } = useSession();
-  const [user, setUser] = useState({
-    name: '',
-    login: '',
-    avatar_url: '',
-  });
-
-  useEffect(() => {
-    const fetchUserData = async () => {
-      if (status === 'authenticated') {
-        try {
-          const userRes = await fetch("https://api.github.com/user", {
-                headers: {
-                Authorization: `bearer ${session?.accessToken as string}`,
-                },
-            });
-          if (userRes.ok) {
-            const userData = await userRes.json();
-            setUser(userData);
-          } else {
-            console.error('Failed to fetch user data:', userRes.statusText);
-          }
-        } catch (error) {
-          console.error('Error fetching user data:', error);
-        }
-      }
-    };
-
-    fetchUserData();
-  }, [session, status]);
-
-  return (
-    <div>
-      <div>{user?.name}</div>
-      <div>{session?.user.email}</div>
-      <div>{user?.login}</div>
-      <div>{user?.avatar_url}</div>
-    </div>
-  );
-}
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
