@@ -1,4 +1,5 @@
 "use client";
+import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -37,17 +38,12 @@ const Timeline = () => {
         },
     ]);
 
-    const toggleAnswer = (index:any) => {
-        const updatedSessionData = [...sessionData];
-        updatedSessionData[index].isExpanded = !updatedSessionData[index].isExpanded;
-        setSessionData(updatedSessionData);
-    };
 
     return(
         <div className="w-full flex flex-col">
-            <div className="bg-[#00ff41]/50 w-full flex p-4 rounded-lg">
+            <div className=" ring-2 ring-[#00ff41] w-full flex p-4 rounded-lg">
                 <div className="flex justify-between items-start">
-                    <h1 className="text-white text-4xl pr-10"><code>Timeline</code></h1>
+                    <h1 className="text-white text-4xl pr-20"><code>Timeline</code></h1>
                     <code>Mark your calendar and make the most out of our event! <br/> See y'all there!</code>
                 </div>
             </div>
@@ -56,14 +52,25 @@ const Timeline = () => {
                     {sessionData.map((session, index) => (
                         <VerticalTimelineElement
                             key={index}
-                            contentArrowStyle={{ borderRight: '10px solid #00ff41' }}
-                            contentStyle={{ background: 'transparent', color: '#fff' }}
+                            className='hover:cursor-default'
+                            contentArrowStyle={{ borderRight: '1px solid #000000' }}
+                            contentStyle={{ background: 'transparent', color: '#ffffff', fontWeight: 'lighter'}}
                             date={session.date}
-                            iconStyle={{ background: '#00ff41', color: '#00ffaa' }}
+                            iconStyle={{ background: '#00ff41', color: '#00ff41', opacity: '0.5'}}
+                            onTimelineElementClick={() => {console.log('clicked'); session.isExpanded = !session.isExpanded; console.log(session.isExpanded); setSessionData([...sessionData])}}
                         >
-                            <h3 className="vertical-timeline-element-title">{session.question}</h3>
+                            <div className='flex flex-col'>
+                            <div className='flex flex-row justify-between'>
+                                <h3 className="text-md font-bold vertical-timeline-element-title"><code>{session.question}</code></h3>
+                                {session.isExpanded ? (
+                                    <ChevronDownIcon className='w-1 h-1 md:w-6 md:h-6 hover:cursor-pointer' />
+                                ) : (
+                                    <ChevronRightIcon className='w-1 h-1 md:w-6 md:h-6 transform transition-transform duration-300 ease-in-out hover:cursor-pointer' style={{ transform: session.isExpanded ? 'rotate(90deg)' : 'rotate(0)' }} />
+                                )}
                             
-                            {session.isExpanded && <p className='font-light'>{session.answer}</p>}
+                            </div>
+                            { session.isExpanded && <p className='text-xs font-light vertical-timeline-element-substitle'><code>{session.answer}</code></p>}
+                            </div>
                         </VerticalTimelineElement>
                     ))}
                 </VerticalTimeline>
