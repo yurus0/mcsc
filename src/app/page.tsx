@@ -105,7 +105,6 @@ export default function Home() {
           </div>
           <div className='pt-24'>
             <RegisterButton />
->>>>>>> adf84491 (fix: fixing front for landing page;)
           </div>
           </div>
       </div>
