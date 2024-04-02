@@ -7,8 +7,8 @@ import {
     TwitterShareButton
 } from "react-share";
 
-const share_message = `ياله خديت التيكي ديالي باش نحضر بلابلاكونف اللي منضمة من طرف الكومينوتي غيغس بلابلا. اش مازال كتسنى، بالي قبل ما يسالي و قطع ورقتك حتى نتا
-@geeksblabla #blablaconf`;
+const share_message = `ياله خديت التيكي ديالي باش نحضر اللي منضمة من طرف الكومينوتي غيغس بلابلا. اش مازال كتسنى، بالي قبل ما يسالي و قطع ورقتك حتى نتا
+@seccamp.ma #mcsc2024`;
 
 const copyToClipboard = (str: string) => {
     const el = document.createElement("textarea");
@@ -32,7 +32,7 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
     return (
         <div className="flex md:flex-row flex-col items-center mt-4">
         <button
-            className="shrink-0 relative px-8 py-2 rounded-full  bg-white/60  font-medium  hover:scale-105 transition-all "
+            className="shrink-0 relative px-8 py-2 rounded-lg  ring-2 ring-[#00ff41] font-medium  hover:scale-105 transition-all "
             onClick={() => {
             setCopied(true);
             copyToClipboard(shareUrl);
@@ -44,14 +44,14 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
             <p className="mx-2 md:my-0 my-2">Or share on </p>
             <div>
             <FacebookShareButton url={shareUrl} className="mx-2 hover:scale-105">
-                <Facebook className="bg-slate-100 rounded-full  text-gray-500 border-solid" />
+                <Facebook className="ring-2 ring-[#00ff41] rounded-full text-white border-solid" />
             </FacebookShareButton>
             <TwitterShareButton
                 url={shareUrl}
                 title={share_message}
                 className="mx-2 hover:scale-105"
             >
-                <Twitter className="bg-slate-100 rounded-full text-gray-500" />
+                <Twitter className="ring-2 ring-[#00ff41] rounded-full text-white border-solid" />
             </TwitterShareButton>
             <LinkedinShareButton
                 url={shareUrl}
@@ -59,7 +59,7 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
                 windowWidth={750}
                 windowHeight={600}
             >
-                <Linkedin className="bg-slate-100 rounded-full text-gray-500 " />
+                <Linkedin className="ring-2 ring-[#00ff41] rounded-full text-white border-solid" />
             </LinkedinShareButton>
                 <EmailShareButton
                     url={shareUrl}
@@ -67,7 +67,7 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
                     body={share_message}
                     className="mx-2 hover:scale-105"
                 >
-                <Email className="bg-slate-100 rounded-full text-gray-500" />
+                <Email className="ring-2 ring-[#00ff41] rounded-full text-white border-solid" />
             </EmailShareButton>
             </div>
         </div>
