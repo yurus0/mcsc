@@ -22,29 +22,29 @@ const Ticket = () => {
         avatar_url: '',
     });
 
-  useEffect(() => {
+    useEffect(() => {
     const fetchUserData = async () => {
-      if (status === 'authenticated') {
-        try {
-          const userRes = await fetch("https://api.github.com/user", {
-                headers: {
-                Authorization: `bearer ${session?.accessToken as string}`,
-                },
-            });
-          if (userRes.ok) {
-            const userData = await userRes.json();
-            setUser(userData);
-          } else {
-            console.error('Failed to fetch user data:', userRes.statusText);
-          }
-        } catch (error) {
-          console.error('Error fetching user data:', error);
+        if (status === 'authenticated') {
+            try {
+            const userRes = await fetch("https://api.github.com/user", {
+                    headers: {
+                    Authorization: `bearer ${session?.accessToken as string}`,
+                    },
+                });
+            if (userRes.ok) {
+                const userData = await userRes.json();
+                setUser(userData);
+            } else {
+                console.error('Failed to fetch user data:', userRes.statusText);
+            }
+            } catch (error) {
+            console.error('Error fetching user data:', error);
+            }
         }
-      }
-    };
+        };
 
-    fetchUserData();
-  }, [session, status]);
+        fetchUserData();
+    }, [session, status]);
 
 
     if(status === "authenticated"){
