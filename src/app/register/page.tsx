@@ -32,7 +32,7 @@ export default function Home() {
         </div>
         <GithubButton/>
         <SessionProvider>
-            <ShareActions shareUrl={url || "https://localhost:3000"}/>
+            {<ShareActions shareUrl={url || "https://localhost:3000"}/>}
         <Ticket/>
         </SessionProvider>
     </div>
