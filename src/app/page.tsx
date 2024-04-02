@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import RegisterButton from '@/components/RegisterButton';
 import RegisterButton from '@/components/RegisterButton';
 import SpaceParticles from '@/components/SpaceParticles';
+import Timeline from '@/components/Timeline';
 import { SessionProvider, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -123,9 +124,9 @@ export default function Home() {
             </div>
           </div>
           <div className='flex flex-col justify-center items-center'>
-          <div className='pt-36'>
+          <div className='pt-28'>
             <h1 className="text-2xl font-semibold text-center">
-              <code>23, 24, 25 april 2024 <br/><span>Rabat - MA</span></code>
+              <code>23, 24, 25 april 2024 , <span>Rabat - MA</span></code>
               </h1>
           </div>
           <div className='pt-24'>
@@ -184,6 +185,9 @@ export default function Home() {
               />
       </div>
       <div id="timeline" className="flex h-full flex-col items-center justify-between p-20">
+        <Timeline />
+      </div>
+      <div id="timeline" className="flex min-h-screen flex-col items-center justify-between p-20">
         <Timeline />
       </div>
       <div id="faq" className="flex min-h-screen flex-col items-center justify-between p-20">
