@@ -10,15 +10,15 @@ const Timeline = () => {
             question: "Keynote Opening",
             type: "Opening",
             answer: "",
-            speakers: ["Speaker 1", "Speaker 2", "Speaker 3"],
+            speakers: ["", "", ""],
             date: "23 April 2024, 3:00 PM",
             isExpanded: false
         },
         {
-            question: "Cloud Compliance: Understanding the Critical role of regulations",
+            question: "Data Gouvernance : Building Trust in the Cloud",
             type: "Panel Discussion",
             answer: "Speakers",
-            speakers: ["Speaker 1", "Speaker 2", "Speaker 3"],
+            speakers: ["", "", ""],
             date: "23 April 2024, 4:00 PM",
             isExpanded: false
         },
@@ -26,7 +26,7 @@ const Timeline = () => {
             question: "Cloud-Native Applications: What to Secure?",
             type: "Conference",
             answer: "Speakers",
-            speakers: ["Speaker 1", "Speaker 2", "Speaker 3"],
+            speakers: ["", "", ""],
             date: "24 April 2024, 10:00 AM",
             isExpanded: false
         },
@@ -34,7 +34,7 @@ const Timeline = () => {
             question: "Container Security: A Deep Dive",
             type: "Workshop",
             answer: "Speakers",
-            speakers: ["Speaker 1", "Speaker 2", "Speaker 3"],
+            speakers: ["", "", ""],
             date: "24 April 2024, 12:00 PM",
             isExpanded: false
         },
@@ -42,7 +42,7 @@ const Timeline = () => {
             question: "The convergence of Cloud & Intelligent systems: A new era of security",
             type: "Conference",
             answer: "Speakers",
-            speakers: ["Speaker 1", "Speaker 2", "Speaker 3"],
+            speakers: ["", "", ""],
             date: "24 April 2024, 2:00 PM",
             isExpanded: false
         },
@@ -50,7 +50,7 @@ const Timeline = () => {
             question: "AI-Powered Threat Detection for Everyday IoT Devices",
             type: "Workshop",
             answer: "Speakers",
-            speakers: ["Speaker 1", "Speaker 2", "Speaker 3"],
+            speakers: ["", "", ""],
             date: "25 April 2024, 4:00 PM",
             isExpanded: false
         },
@@ -58,7 +58,7 @@ const Timeline = () => {
             question: "PenTesting in the Cloud: A Comprehensive Guide",
             type: "Workshop",
             answer: "Speakers",
-            speakers: ["Speaker 1", "Speaker 2", "Speaker 3"],
+            speakers: ["", "", ""],
             date: "25 April 2024, 6:00 PM",
             isExpanded: false
         },
@@ -66,16 +66,24 @@ const Timeline = () => {
             question: "The Grand Finale",
             type: "CTF",
             answer: "Duration: 12 hours",
-            speakers: ["Speaker 1", "Speaker 2", "Speaker 3"],
+            speakers: ["", "", ""],
             date: "25 April 2024, 9:00 PM",
+            isExpanded: false
+        },
+        {
+            question: "The Future of the Cloud: Secured by Tomorrow's Technologies",
+            type: "Panel Discussion",
+            answer: "",
+            speakers: ["", "", ""],
+            date: "25 April 2024, 10:00 AM",
             isExpanded: false
         },
         {
             question: "Awarding Ceremony",
             type: "Closing",
             answer: "",
-            speakers: ["Speaker 1", "Speaker 2", "Speaker 3"],
-            date: "25 April 2024, 11:00 AM",
+            speakers: ["", "", ""],
+            date: "25 April 2024, 12:00 AM",
             isExpanded: false
         },
     ]);

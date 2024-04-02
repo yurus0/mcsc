@@ -52,7 +52,7 @@ const Ticket = () => {
         return (
             <div className="shrink-0 mt-4 relative pt-8">
                 <Image
-                    src="/Asset 1.png"
+                    src="https://raw.githubusercontent.com/yurus0/mcsc/sharing/public/Asset%201.png"
                     alt="Ticket"
                     width={900}
                     height={80}
@@ -85,7 +85,7 @@ const Ticket = () => {
     return (
         <div className="shrink-0 mt-4 relative pt-8">
         <Image
-            src="/Asset 1.png"
+            src="https://raw.githubusercontent.com/yurus0/mcsc/sharing/public/Asset%201.png"
             alt="Ticket"
             width={900}
             height={250}
