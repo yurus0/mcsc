@@ -1,5 +1,4 @@
 import { User } from "next-auth";
-import { User } from "next-auth";
 import NextAuth from "next-auth/next";
 import GithubProvider from "next-auth/providers/github";
 
@@ -13,15 +12,6 @@ declare module 'next-auth' {
          // Add other custom properties if needed
     };
     accessToken: string; // Add access token property
-    }
-}
-
-declare module 'next-auth' {
-    interface User {
-        login: string;
-        name: string;
-        image: string;
-        email: string;
     }
 }
 

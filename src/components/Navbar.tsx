@@ -15,24 +15,8 @@ const navbarItems: NavbarItem[] = [
     { item: "Partners", id: "partners" },
     { item: "FAQ", id: "faq" }
 ];
-import { useState } from 'react';
-
-interface NavbarItem {
-    item: string;
-    id: string;
-}
-
-const navbarItems: NavbarItem[] = [
-    { item: "About", id: "about" },
-    { item: "Speakers", id: "speakers" },
-    { item: "Timeline", id: "timeline" },
-    { item: "Sponsors", id: "sponsors" },
-    { item: "Partners", id: "partners" },
-    { item: "FAQ", id: "faq" }
-];
 
 const Navbar = () => {
-    const [toggle, setToggle] = useState(false);
     const [toggle, setToggle] = useState(false);
     return (
         <div className="left-0 top-0 w-full bg-black p-4 lg:static lg:w-auto flex items-center justify-between pl-20">
