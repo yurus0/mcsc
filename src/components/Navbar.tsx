@@ -19,13 +19,13 @@ const navbarItems: NavbarItem[] = [
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
     return (
-        <div className="left-0 top-0 w-full bg-black p-6 lg:static lg:w-auto lg:p-4 flex items-center justify-center">
+        <div className="left-0 top-0 w-full bg-black p-4 lg:static lg:w-auto flex items-center justify-between pl-20">
             <div className='px-0 pt-2 flex flex-row justify-center items-center'>
                 <div className="pl-0">
                     <Image
                         src="/mcsc.png"
                         alt="MCSC Logo"
-                        width={60}
+                        width={70}
                         height={25}
                     />
                 </div>

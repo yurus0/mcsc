@@ -73,55 +73,6 @@ const FAQ = () => {
             ))}
         </div>
     </div>
-        // <div className='w-full justify-center px-8 py-20'>
-        // {/* Frequently Asked questions */}
-        // <div className='flex flex-col items-center pb-20'>
-        //     <h1 className='text-4xl font-semibold text-center mb-8'>
-        //     <code>Frequently Asked Questions</code>
-        //     </h1>
-        // </div>
-        // <div className='flex flex-col items-start px-20 mx-auto'>
-        //     {faqData.map((faq, index) => (
-        //         <motion.div
-        //         key={index}
-        //         className="card-container"
-        //         initial={{ y: 100, opacity: 0 }}
-        //         whileInView={{
-        //             y: 0,
-        //             opacity: 100,
-        //             transition: {
-        //             type: "spring",
-        //             bounce: 0.4,
-        //             duration: 1
-        //             }
-        //         }}
-        //         viewport={{ once: true, amount: 1 }}
-        //     >
-        //         <div>
-        //             <div className='flex flex-row justify-between py-4' >
-        //             <div onClick={() => toggleAnswer(index)}>
-        //             {faq.isOpen ? (
-        //                 <ChevronDownIcon className='w-6 h-6 hover:cursor-pointer' />
-        //             ) : (
-        //                 <ChevronRightIcon className='w-6 h-6 transform transition-transform duration-300 ease-in-out hover:cursor-pointer' style={{ transform: faq.isOpen ? 'rotate(90deg)' : 'rotate(0)' }} />
-        //             )}
-        //             </div>
-        //             <div className='justify-between px-8 min-w-2/3'>
-        //                 <p className='text-xl font-regular'>
-        //                 <code>{faq.question}</code>
-        //                 </p>
-        //                 <p className='text-sm break-normal pt-6 pr-2'>
-        //                 {faq.isOpen && (
-        //                     <code>{faq.answer}</code>
-        //                 )}
-        //                 </p>
-        //             </div>
-        //             </div>
-        //         </div>
-        //     </motion.div>
-        //     ))}
-        // </div>
-        // </div>
     );
 }
 export default FAQ;

@@ -3,6 +3,7 @@ import FAQ from '@/components/Faq';
 import Footer from '@/components/Footer';
 import RegisterButton from '@/components/RegisterButton';
 import SpaceParticles from '@/components/SpaceParticles';
+import Timeline from '@/components/Timeline';
 import { SessionProvider, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -97,22 +98,12 @@ export default function Home() {
             </div>
           </div>
           <div className='flex flex-col justify-center items-center'>
-          <div className='pt-36'>
+          <div className='pt-28'>
             <h1 className="text-2xl font-semibold text-center">
-              <code>23, 24, 25 april 2024 <br/><span>Rabat - MA</span></code>
+              <code>23, 24, 25 april 2024 , <span>Rabat - MA</span></code>
               </h1>
           </div>
           <div className='pt-24'>
-<<<<<<< HEAD
-            <RegisterButton/>
-            <Link href="/register">
-            <button className='shrink-0 mt-4 relative bg-transparent rounded-lg ring-2 ring-[#00ff41] px-10 py-4'>
-              <p className='text-xl text-center'>
-              <code>Register Now</code>
-              </p>
-            </button>
-            </Link>
-=======
             <RegisterButton />
 >>>>>>> adf84491 (fix: fixing front for landing page;)
           </div>
@@ -149,6 +140,9 @@ export default function Home() {
                 priority
                 className='pt-44'
               />
+      </div>
+      <div id="timeline" className="flex min-h-screen flex-col items-center justify-between p-20">
+        <Timeline />
       </div>
       <div id="faq" className="flex min-h-screen flex-col items-center justify-between p-20">
         <FAQ />
