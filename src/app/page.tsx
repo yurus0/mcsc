@@ -1,13 +1,14 @@
 "use client";
 import FAQ from '@/components/Faq';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 import RegisterButton from '@/components/RegisterButton';
 import SpaceParticles from '@/components/SpaceParticles';
+import Timeline from '@/components/Timeline';
 import { SessionProvider, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
-import Navbar from '../components/Navbar';
 
 export function Profile() {
   const { data: session, status } = useSession();
