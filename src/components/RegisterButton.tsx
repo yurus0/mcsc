@@ -16,7 +16,6 @@ const RegisterButton = () => {
             <code>{loading ? "Redirecting ...." : "Register Now"}</code>
         </p>
     </Link>
-    </Link>
   );
 }
 export default RegisterButton;

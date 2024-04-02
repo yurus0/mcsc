@@ -25,11 +25,7 @@ const FAQ = () => {
     };
     return (
         <div className='w-full px-4 py-10 md:px-8 md:py-20'>
-        <div className='w-full px-4 py-10 md:px-8 md:py-20'>
         {/* Frequently Asked questions */}
-        <div className='flex flex-col items-center pb-10 md:pb-20'>
-            <h1 className='text-3xl md:text-4xl font-semibold text-center mb-4'>
-                <code>Frequently Asked Questions</code>
         <div className='flex flex-col items-center pb-10 md:pb-20'>
             <h1 className='text-3xl md:text-4xl font-semibold text-center mb-4'>
                 <code>Frequently Asked Questions</code>
@@ -77,6 +73,7 @@ const FAQ = () => {
                 </motion.div>
             ))}
         </div>
+    </div>
     </div>
     );
 }
