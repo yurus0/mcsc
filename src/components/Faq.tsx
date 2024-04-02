@@ -61,7 +61,7 @@ const FAQ = () => {
                                 <p className='text-base md:text-xl font-regular'>
                                     <code>{faq.question}</code>
                                 </p>
-                                <p className='text-xs md:text-sm break-normal pt-2 md:pt-6 pr-2'>
+                                <p className='text-md md:text-md break-normal pt-2 font-light md:pt-6 pr-2'>
                                     {faq.isOpen && (
                                         <code>{faq.answer}</code>
                                     )}

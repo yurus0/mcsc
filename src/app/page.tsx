@@ -114,7 +114,7 @@ export default function Home() {
         {/*about*/}
         <div className="flex flex-col items-center">
         {/* text-3xl font-semibold text-left mb-8 pt-48 */}
-          <h1 className={`${isMobile ? "text-2xl md:text-3xl font-semibold text-center mb-4 md:mb-8 pt-20 md:pt-48": "text-3xl font-semibold text-left mb-8 pt-48 "}`}>
+          <h1 className={`${isMobile ? "text-2xl md:text-3xl font-semibold text-center mb-4 md:mb-8 pt-20 md:pt-48": "text-5xl font-semibold text-left mb-8 pt-48 "}`}>
             <code>Gathering Enthusiasts !</code>
           </h1>
            {/* items-start mx-auto pr-10 pt-10 */}
@@ -140,7 +140,7 @@ export default function Home() {
                 className='pt-44'
               />
       </div>
-      <div id="timeline" className="flex min-h-screen flex-col items-center justify-between p-20">
+      <div id="timeline" className="flex h-full flex-col items-center justify-between p-20">
         <Timeline />
       </div>
       <div id="faq" className="flex min-h-screen flex-col items-center justify-between p-20">
