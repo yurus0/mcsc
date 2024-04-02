@@ -30,8 +30,6 @@ const handler = NextAuth({
         GithubProvider({
             clientId: process.env.GITHUB_CLIENT_ID as any,
             clientSecret: process.env.GITHUB_CLIENT_SECRET as any,
-            clientId: process.env.GITHUB_CLIENT_ID as any,
-            clientSecret: process.env.GITHUB_CLIENT_SECRET as any,
         }),
     ],
     callbacks: {
