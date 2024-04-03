@@ -31,7 +31,7 @@ const Timeline = () => {
             isExpanded: false
         },
         {
-            question: "Container Security: A Deep Dive",
+            question: "A Deep Dive into Container Security",
             type: "Workshop",
             answer: "Speakers",
             speakers: ["", "", ""],
@@ -39,7 +39,7 @@ const Timeline = () => {
             isExpanded: false
         },
         {
-            question: "The convergence of Cloud & Intelligent systems: A new era of security",
+            question: "The convergence of Cloud & Intelligent systems: A New Era of Security",
             type: "Conference",
             answer: "Speakers",
             speakers: ["", "", ""],
@@ -71,7 +71,7 @@ const Timeline = () => {
             isExpanded: false
         },
         {
-            question: "The Future of the Cloud: Secured by Tomorrow's Technologies",
+            question: "The Future of the Cloud: Emerging Challenges & Solutions",
             type: "Panel Discussion",
             answer: "",
             speakers: ["", "", ""],
