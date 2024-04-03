@@ -11,7 +11,7 @@ const Timeline = () => {
             type: "Opening",
             answer: "",
             speakers: ["", "", ""],
-            date: "23 April 2024, 3:00 PM",
+            date: "23 April 2024, 4:00 PM",
             isExpanded: false
         },
         {
@@ -19,7 +19,7 @@ const Timeline = () => {
             type: "Panel Discussion",
             answer: "Speakers",
             speakers: ["", "", ""],
-            date: "23 April 2024, 4:00 PM",
+            date: "23 April 2024, 5:00 PM",
             isExpanded: false
         },
         {
