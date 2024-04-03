@@ -1,14 +1,17 @@
 "use client";
 import FAQ from '@/components/Faq';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+import Partners from '@/components/Partners';
 import RegisterButton from '@/components/RegisterButton';
 import SpaceParticles from '@/components/SpaceParticles';
+import Speakers from '@/components/Speakers';
+import Sponsors from '@/components/Sponsors';
 import Timeline from '@/components/Timeline';
 import { SessionProvider } from 'next-auth/react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
-import Navbar from '../components/Navbar';
 
 
 export default function Home() {
@@ -67,7 +70,7 @@ export default function Home() {
           </div>
           </div>
       </div>
-      <div className='py-10'></div>
+      <div className='pt-10'></div>
       {/* //flex min-h-screen flex-col(row) items-center justify-center p-5 md:p-10 */}
       <div id="about" className={`${isMobile ? "flex min-h-screen flex-col items-center justify-center p-10 px-16" : "flex min-h-screen flex-row items-center justify-center p-5 md:p-10"} `}>
         {/*about*/}
@@ -99,8 +102,17 @@ export default function Home() {
                 className='pt-44'
               />
         </div>
+      <div id="speakers" className="flex min-h-1/3 flex-col w-full justify-center px-16 py-4 hidden">
+        <Speakers />
+      </div>
       <div id="timeline" className="flex h-full flex-col items-center justify-between p-20">
         <Timeline />
+      </div>
+      <div id="sponsors" className="flex h-full flex-col items-center justify-between p-20 hidden">
+        <Sponsors />
+      </div>
+      <div id="partners" className="flex h-full flex-col items-center justify-between p-20 hidden">
+        <Partners />
       </div>
       <div id="faq" className="flex min-h-screen flex-col items-center justify-between p-20">
         <FAQ />
