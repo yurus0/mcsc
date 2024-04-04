@@ -39,7 +39,7 @@ const Timeline = () => {
             isExpanded: false
         },
         {
-            question: "The convergence of Cloud & Intelligent systems: A New Era of Security",
+            question: "Cloud Security for AI & Smart systems",
             type: "Conference",
             answer: "Speakers",
             speakers: ["", "", ""],

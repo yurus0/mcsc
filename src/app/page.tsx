@@ -108,10 +108,10 @@ export default function Home() {
       <div id="timeline" className="flex h-full flex-col items-center justify-between p-20">
         <Timeline />
       </div>
-      <div id="sponsors" className="flex h-full flex-col items-center justify-between p-20 hidden">
+      <div id="sponsors" className="flex h-full flex-col items-center justify-between">
         <Sponsors />
       </div>
-      <div id="partners" className="flex h-full flex-col items-center justify-between p-20 hidden">
+      <div id="partners" className="flex h-full flex-col items-center justify-between">
         <Partners />
       </div>
       <div id="faq" className="flex min-h-screen flex-col items-center justify-between p-20">
