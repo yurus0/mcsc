@@ -19,7 +19,7 @@ const Partners = () => {
     </div>
     <div className='absolute flex flex-col bg-gradient-to-t from-transparent via-[#00ff41]/[.5] min-h-96 w-full justify-center items-center'>
       <div className='text-transparent bg-gradient-to-tr from-[#00ff41] to-[#66ff7d] bg-clip-text pb-14'>
-          <code className='text-5xl md:text-6xl font-black'>In Partnership with</code>
+          <code className='text-5xl md:text-6xl font-black'>In Collaboration with</code>
         </div>
         <div className="pt-6">
       <div className='flex flex-row justify-center items-center'>
