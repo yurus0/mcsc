@@ -52,7 +52,7 @@ export default function Home() {
           <div className="flex pt-40">
             <div className="flex justify-center">
               <Image
-                src="/title.svg"
+                src="/title.png"
                 alt="Title"
                 width={isMobile ? 500 : 1000} //1000
                 height={isMobile ? 50 : 100} //100

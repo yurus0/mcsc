@@ -61,6 +61,13 @@ const Partners = () => {
           width={200}
           height={200}
         /></div>
+        <div className='px-10'>
+          <Image
+            src="/rekrute.svg"
+            alt="rekrute"
+            width={200}
+            height={200}
+          /></div>
       </div>
       </div>
       <div className="pt-20">
