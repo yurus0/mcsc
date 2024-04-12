@@ -15,11 +15,20 @@ declare module 'next-auth' {
     }
 }
 
+declare module 'next-auth' {
+    interface User {
+        login: string;
+        name: string;
+        image: string;
+        email: string;
+    }
+}
+
 const handler = NextAuth({
     providers: [
         GithubProvider({
-            clientId: process.env.GITHUB_CLIENT_ID as any,
-            clientSecret: process.env.GITHUB_CLIENT_SECRET as any,
+            clientId: process.env.GITHUB_CLIENT_ID as string,
+            clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
         }),
     ],
     callbacks: {
