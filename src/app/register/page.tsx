@@ -4,7 +4,7 @@ import { GithubButton } from '@/components/GithubButton';
 import Navbar from '@/components/Navbar';
 import SpaceParticles from '@/components/SpaceParticles';
 import Ticket from '@/components/Ticket';
-import { SessionProvider, useSession } from 'next-auth/react';
+import { SessionProvider } from 'next-auth/react';
 import Image from 'next/image';
 import { Canvas } from 'react-three-fiber';
 
@@ -25,7 +25,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col items-center justify-center">
         <div className="flex pb-10">
                 <Image
-                src="/title.svg"
+                src="/title.png"
                 alt="Title"
                 width={1000}
                 height={100}
