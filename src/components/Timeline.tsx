@@ -51,7 +51,7 @@ const Timeline = () => {
             type: "Workshop",
             answer: "Speakers",
             speakers: ["", "", ""],
-            date: "25 April 2024, 4:00 PM",
+            date: "24 April 2024, 4:00 PM",
             isExpanded: false
         },
         {
@@ -59,7 +59,7 @@ const Timeline = () => {
             type: "Workshop",
             answer: "Speakers",
             speakers: ["", "", ""],
-            date: "25 April 2024, 6:00 PM",
+            date: "24 April 2024, 5:00 PM",
             isExpanded: false
         },
         {
@@ -67,7 +67,7 @@ const Timeline = () => {
             type: "CTF",
             answer: "Duration: 12 hours",
             speakers: ["", "", ""],
-            date: "25 April 2024, 9:00 PM",
+            date: "24 April 2024, 9:00 PM",
             isExpanded: false
         },
         {

@@ -8,7 +8,6 @@ import SpaceParticles from '@/components/SpaceParticles';
 import Speakers from '@/components/Speakers';
 import Sponsors from '@/components/Sponsors';
 import Timeline from '@/components/Timeline';
-import { SessionProvider } from 'next-auth/react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
@@ -38,7 +37,6 @@ export default function Home() {
     };
   }, []);
   return (
-    <SessionProvider>
       <div className='bg-black'>
         <div className="fixed absolute top-0 left-0" style={{ height: '110vh', width: '100vw' }}>
               <Canvas>
@@ -119,6 +117,5 @@ export default function Home() {
       </div>
       <Footer/>
       </div>
-    </SessionProvider>
   );
 }
