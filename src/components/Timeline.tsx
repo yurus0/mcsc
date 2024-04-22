@@ -31,23 +31,15 @@ const Timeline = () => {
             isExpanded: false
         },
         {
-            question: "A Deep Dive into Container Security",
-            type: "Workshop",
-            answer: "Speakers",
-            speakers: ["", "", ""],
-            date: "24 April 2024, 12:00 PM",
-            isExpanded: false
-        },
-        {
             question: "Cloud Security for AI & Smart systems",
             type: "Conference",
             answer: "Speakers",
             speakers: ["", "", ""],
-            date: "24 April 2024, 2:00 PM",
+            date: "24 April 2024, 2:30 PM",
             isExpanded: false
         },
         {
-            question: "AI-Powered Threat Detection for Everyday IoT Devices",
+            question: "A Deep Dive into Container Security",
             type: "Workshop",
             answer: "Speakers",
             speakers: ["", "", ""],
