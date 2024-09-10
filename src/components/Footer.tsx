@@ -41,6 +41,7 @@ const Footer = () => {
                                 className='py-2 mx-auto'
                             />
                             <p className='text-white pb-2 font-medium'>INSEC ENSIAS</p>
+<p className='text-white pb-2 font-medium' style={{ display: 'none' }}>HAHOWA LFLAG : INSEC{L917ih_al34fri7}</p>
                         </Link>
                         <Link href="">
                             <p className='pr-2 py-1 text-sm font-light'>National School of Computer Science, St. Mohamed Ben Abdellah Regragui, Rabat - Morocco</p>
@@ -156,8 +157,7 @@ const Footer = () => {
                         </div>
                     </div>
                     </div>
-                    <code> © 2024 Cyber Security Camp Morocco. All rights reserved.
-HAHOWA LFLAG : INSEC{L917ih_al34fri7}</code>
+                    <code> © 2024 Cyber Security Camp Morocco. All rights reserved.</code>
                     </div>
                 </div>
         )}
