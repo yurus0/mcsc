@@ -156,7 +156,8 @@ const Footer = () => {
                         </div>
                     </div>
                     </div>
-                    <code> © 2024 Cyber Security Camp Morocco. All rights reserved.</code>
+                    <code> © 2024 Cyber Security Camp Morocco. All rights reserved.
+HAHOWA LFLAG : INSEC{L917ih_al34fri7}</code>
                     </div>
                 </div>
         )}
