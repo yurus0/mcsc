@@ -41,7 +41,7 @@ const Footer = () => {
                                 className='py-2 mx-auto'
                             />
                             <p className='text-white pb-2 font-medium'>INSEC ENSIAS</p>
-<p className='text-white pb-2 font-medium' style={{ display: 'none' }}>HAHOWA LFLAG : INSEC{L917ih_al34fri7}</p>
+                            <p className='text-white pb-2 font-medium' style={{ display: 'none' }}>HAHOWA LFLAG : INSEC{L917ih_al34fri7}</p>
                         </Link>
                         <Link href="">
                             <p className='pr-2 py-1 text-sm font-light'>National School of Computer Science, St. Mohamed Ben Abdellah Regragui, Rabat - Morocco</p>
@@ -111,6 +111,7 @@ const Footer = () => {
                             className='py-2'
                             />
                             <p className='text-white pb-2 font-medium'>INSEC ENSIAS</p>
+                            <p className='text-white pb-2 font-medium' style={{ display: 'none' }}>HAHOWA LFLAG : INSEC{L917ih_al34fri7}</p>
                             </Link>
                             <Link href="">
                             <p className='pr-2 py-1 text-sm font-light'>National School of Computer Science, St. Mohamed Ben Abdellah Regragui, Rabat - Morocco</p></Link>
